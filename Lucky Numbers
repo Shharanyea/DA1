@@ -1,0 +1,30 @@
+#include<stdio.h>
+int main(){
+    int a[8],n,i,su=0,sum=0,summ=0,ct=0;
+    scanf("%d",&n);
+    int tp=n;
+    while(tp!=0){
+        tp/=10;
+        ct++;
+    }
+    if(ct!=8)
+        printf("Invalid Input");
+    else{
+        for(i=0; i<8; i++){
+            a[i]=n%10;
+            n=n/10;
+        }
+        for(i=0;i<8;i++){
+            if(i%2==0)
+                su+=a[i];
+            else
+                sum+=a[i];
+        }
+        summ=su+(sum*3);
+        if(summ%10==0)
+            printf("Lucky Number");
+        else
+            printf("Not a Lucky Number");
+    }
+}
+
