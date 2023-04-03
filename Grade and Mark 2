@@ -1,0 +1,11 @@
+#include<stdio.h>
+int main(){
+    int mat,phy,chem;
+    scanf("%d %d %d ",&mat,&phy,&chem);
+    if (mat>=65 && phy>=55 && chem>=50 && mat+chem+phy>=190)
+        printf("eligible");
+    else if (mat+phy>= 140)
+        printf("eligible");
+    else
+        printf("not eligible");
+    return 0; }
